@@ -757,6 +757,10 @@ main {
 
 /*==================== BRAND SECTION ====================*/
 
+.brands{
+    position: relative;
+}
+
 .brand-desc {
     font-size: 0.875rem;
     font-weight: var(--font-regular);
