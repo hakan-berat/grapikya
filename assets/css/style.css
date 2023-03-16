@@ -514,6 +514,12 @@ main {
     top: -3.5rem;
     z-index: 1;
     width: 104px;
+    transition: .3s;
+}
+
+.skills-card:hover .skills-img{
+    transform: translate(-50%, -1.5rem);
+    transition: .3s;
 }
 
 /*==================== CASES ====================*/
@@ -582,6 +588,16 @@ main {
     letter-spacing: 0.1rem;
 }
 
+.statistics-card:hover{
+    background-color: var(--primary-color);
+    transition: .3s;
+}
+
+.statistics-card:hover .statistics-card-title{
+    color: white;
+    transition: .3s;
+}
+
 /*==================== PROCESS ====================*/
 .process {
     position: relative;
@@ -630,6 +646,8 @@ main {
 .process-data-img {
     margin-bottom: .5rem;
     width: 160px;
+    /*-webkit-filter: drop-shadow(3px 3px 3px #9B378A);
+    filter: drop-shadow(1px 1px 1px #9B378A);*/
 }
 
 .process-data-title {
@@ -774,16 +792,29 @@ main {
     margin-bottom: 5.5rem;
 }
 
+.brand-content div img{
+    opacity: 0.7;
+    transition: .3s;
+}
+
+.brand-content div img:hover{
+    opacity: 1;
+    transition: .3s;
+}
+
 .brand-col,
 .brand-col-2 {
     padding-block: .5rem;
+    align-items: center;
 }
 
 .brand-col {
     grid-template-columns: repeat(2, 80px);
+    column-gap: 2rem;
 }
 
 .brand-col-2 {
+    column-gap: 2rem;
     grid-template-columns: repeat(3, 80px);
 }
 
@@ -879,7 +910,7 @@ main {
 }
 
 .social-icon {
-    font-size: .875rem;
+    font-size: 1rem;
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     padding: .875rem;
@@ -891,6 +922,11 @@ main {
 .social-icon a {
     display: inline-flex;
     color: white;
+}
+
+.social-icon:hover{
+    background-color: var(--primary-color);
+    transition: .3s;
 }
 
 .footer-copy {
@@ -962,11 +998,11 @@ main {
 
 @media screen and (min-width: 567px) {
     .brand-col {
-        grid-template-columns: repeat(2, 120px);
+        grid-template-columns: repeat(2, 150px);
     }
 
     .brand-col-2 {
-        grid-template-columns: repeat(3, 120px);
+        grid-template-columns: repeat(3, 150px);
     }
 
     .home-wave {
@@ -1128,6 +1164,14 @@ main {
         left: -30rem;
     }
 
+    .brand-col{
+        grid-template-columns: repeat(2, 190px);
+    }
+
+    .brand-col-2{
+        grid-template-columns: repeat(3, 190px);
+    }
+
     .footer-elipse {
         width: calc(1.5*600px);
         height: calc(1.5*356px);
@@ -1147,7 +1191,7 @@ main {
         }
 
         .nav {
-            height: calc(var(--header-height) + 1.5rem);
+            height: calc(var(--header-height) + .875rem);
         }
 
         .nav-list {
