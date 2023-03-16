@@ -87,12 +87,12 @@ body {
     position: relative;
 }
 
-.overlay{
+.overlay {
     top: 0;
     left: 0;
     position: absolute;
     width: 100%;
-    height: 100%;   
+    height: 100%;
     background-color: rgba(18, 18, 18, 0.5);
     --z-overlay: -10;
 }
@@ -129,7 +129,7 @@ main {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-    padding-block: 4rem ;
+    padding-block: 4rem;
 }
 
 .section-desc {
@@ -201,6 +201,8 @@ main {
     z-index: var(--z-fixed);
     background-color: transparent;
     transition: .3s;
+    box-shadow: 5px 3px 30px black;
+    overflow: hidden;
 }
 
 .nav {
@@ -251,16 +253,23 @@ main {
         box-shadow: 0 8px 20px hsla(266, 100%, 63%, 0.5);
         padding-block: 3.5rem;
         transition: top .4s;
-        opacity: 0;
     }
 }
 
-.bg-header {
+.bg-header{
     background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    box-shadow: 0 2px 8px hsla(19, 64%, 24%, .1);
-    transition: .3s;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(2rem);
+    background: rgba(255, 255, 255, 0.25);
+    z-index: -1;
 }
 
 .nav-list {
@@ -280,7 +289,7 @@ main {
 /*NAV TOGGLE*/
 .show-menu {
     top: 0;
-    opacity: 1;
+    transition: .3s;
     /*Backdrop filter fixed nav göstermesi çözümü*/
 }
 
@@ -517,7 +526,7 @@ main {
     transition: .3s;
 }
 
-.skills-card:hover .skills-img{
+.skills-card:hover .skills-img {
     transform: translate(-50%, -1.5rem);
     transition: .3s;
 }
@@ -588,12 +597,12 @@ main {
     letter-spacing: 0.1rem;
 }
 
-.statistics-card:hover{
+.statistics-card:hover {
     background-color: var(--primary-color);
     transition: .3s;
 }
 
-.statistics-card:hover .statistics-card-title{
+.statistics-card:hover .statistics-card-title {
     color: white;
     transition: .3s;
 }
@@ -775,7 +784,7 @@ main {
 
 /*==================== BRAND SECTION ====================*/
 
-.brands{
+.brands {
     position: relative;
 }
 
@@ -792,12 +801,12 @@ main {
     margin-bottom: 5.5rem;
 }
 
-.brand-content div img{
+.brand-content div img {
     opacity: 0.7;
     transition: .3s;
 }
 
-.brand-content div img:hover{
+.brand-content div img:hover {
     opacity: 1;
     transition: .3s;
 }
@@ -924,7 +933,7 @@ main {
     color: white;
 }
 
-.social-icon:hover{
+.social-icon:hover {
     background-color: var(--primary-color);
     transition: .3s;
 }
@@ -1057,6 +1066,10 @@ main {
         transition: .3s;
     }
 
+    .header::before {
+        background: transparent;
+    }
+
     .home-wave {
         transform: scale(1.5);
         top: 7rem;
@@ -1164,11 +1177,11 @@ main {
         left: -30rem;
     }
 
-    .brand-col{
+    .brand-col {
         grid-template-columns: repeat(2, 190px);
     }
 
-    .brand-col-2{
+    .brand-col-2 {
         grid-template-columns: repeat(3, 190px);
     }
 
