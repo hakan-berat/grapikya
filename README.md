@@ -12,8 +12,10 @@ Tüm sectionlar farklı cihaz boyutlarına duyarlı ve kullanıcı deneyimini bo
   
 ## Yol haritası
 
-- Animasyonlar artırılacak
+- Animasyonlar artırılacak.
 
-- Kullanıcı deneyimi zenginleştirilecek
+- Kullanıcı deneyimi zenginleştirilecek.
+
+- Nav Scrolling ile gidilen sectionların ortalanması sağlanacak.
 
   
